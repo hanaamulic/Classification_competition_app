@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-# from files_to_update.students import students
+from files_to_update.students import students
 from src.pd_functions import *
 
 # path to results
@@ -14,12 +14,12 @@ text_input_container.text_input(
 )
 
 
-# if st.session_state.text_input != "":
-#     if st.session_state.text_input in students:
-#         text_input_container.empty()
-#         st.info('Participant name ' + st.session_state.text_input)
-#     else:
-#         st.error("Please use the correct username.")
+if st.session_state.text_input != "":
+    if st.session_state.text_input in students:
+        text_input_container.empty()
+        st.info('Participant name ' + st.session_state.text_input)
+    else:
+        st.error("Please use the correct username.")
 
 if st.session_state.text_input != "":
 
