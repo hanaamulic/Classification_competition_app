@@ -9,17 +9,17 @@ RESULTS_PATH = 'data/results_housing_class.csv'
 # introduce participant name
 text_input_container = st.empty()
 text_input_container.text_input(
-    "Introduce participant username: ",
+    "Participant username: ",
     key="text_input"
 )
 
 
-if st.session_state.text_input != "":
-    if st.session_state.text_input in students:
-        text_input_container.empty()
-        st.info('Participant name ' + st.session_state.text_input)
-    else:
-        st.error("Please use the correct username.")
+# if st.session_state.text_input != "":
+#     if st.session_state.text_input in students:
+#         text_input_container.empty()
+#         st.info('Participant name ' + st.session_state.text_input)
+#     else:
+#         st.error("Please use the correct username.")
 
 if st.session_state.text_input != "":
 
